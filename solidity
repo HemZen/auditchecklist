@@ -1,0 +1,6 @@
+- Passing high/low/no value to a function
+- Break the developers assumptions based on docs, comments, messages from them.
+- Look through all possible contract states (is the contract paused, is a state variable deleted, can the code break if it has a different status. etc..)
+- What's going to happen if I keep calling the same function over and over again, with the same value. Is it going to have the same result as if I call it once?
+- Break order of function execution. Call func B before func A.
+- Try to break every single: if, assert, require.
