@@ -1,0 +1,25 @@
+→ 22 Common attack vectors to check while researching:
+
+- Frontrunning/backrunning
+- Using very small amounts as inputs (e.g. 1 wei)
+- Passing zero as an input
+- Using contracts that cannot accept ether
+- Gas griefing with external calls
+- Weird ERC20 tokens (fees, 777, return values, etc...)
+- Price manipulation
+- Blacklisted ERC20 addresses
+- Potential overflow/underflow
+- Block re-orgs
+- Reentrancy (721, inter-function, inter-contract, inter-system (read-only))
+- Sybil attacks on incentives/tokenomics
+- Flash loans (even flash mints e.g. Dai)
+- Accepting any data from an arbitrary address (Malicious bytes)
+- Inflating internal accounting by sending tokens to the system
+- Forced precision loss when precision really matters (min balance checks etc...)
+- Addresses that might be empty at one point, yet house contract code at another
+
+- Reverting (external calls I can make revert, inputs I can use to cause a revert)
+- Unexpected addresses (provide a `receiver` address pointing to another contract in the system)
+- Selector clashing
+- Signatures (replay, malleability, recover to 0 address etc...)
+- Hash collision (encodePacked)
